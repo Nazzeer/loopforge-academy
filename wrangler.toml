@@ -6,6 +6,10 @@ compatibility_date = "2025-06-01"
 [assets]
 directory = "./public"
 binding = "ASSETS"
+# Worker runs first on every request so security headers are applied to
+# static assets too (without this, Cloudflare serves files directly and
+# the HTML page ships without CSP/HSTS).
+run_worker_first = true
 
 [[d1_databases]]
 binding = "DB"
