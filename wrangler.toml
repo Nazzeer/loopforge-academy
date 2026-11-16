@@ -18,6 +18,6 @@ binding = "AI"
 
 # Durable config lives HERE, never in dashboard-set vars (deploys wipe those).
 [vars]
-SETUP_KEY = "dev-setup-key-change-me"
+SETUP_KEY = "dfb53c4c3e39bef7355912ddd51383029a63cbfd1bacd4bc"
 ASSISTANT_MODEL = "@cf/qwen/qwen3-30b-a3b-fp8"
 LIMITS_MODE = "soft"
