@@ -10,7 +10,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "loopforge-db"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "5223ac34-cff8-4c2e-8eed-20fab2b84fe1"
 migrations_dir = "db/migrations"
 
 [ai]
