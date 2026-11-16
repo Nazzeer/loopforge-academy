@@ -1,0 +1,23 @@
+name = "loopforge-academy"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+# Static SPA in public/ (vanilla JS, no build step)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "loopforge-db"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "db/migrations"
+
+[ai]
+binding = "AI"
+
+# Durable config lives HERE, never in dashboard-set vars (deploys wipe those).
+[vars]
+SETUP_KEY = "dev-setup-key-change-me"
+ASSISTANT_MODEL = "@cf/qwen/qwen3-30b-a3b-fp8"
+LIMITS_MODE = "soft"

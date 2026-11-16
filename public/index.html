@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loopforge Academy — Learn to build AI agent systems</title>
+<meta name="description" content="Loopforge Academy teaches SME and startup teams to build AI agent systems: checked loops, gated graphs, evidence-based done-tests, and a built-in AI coach.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#/" id="brandLink">LOOPFORGE <span>ACADEMY</span></a>
+    <nav class="topnav" id="topnav"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="app">
+  <p class="muted">Loading…</p>
+</main>
+
+<div id="coachDrawer" class="coach-drawer hidden" aria-hidden="true">
+  <div class="coach-head">
+    <strong>AI Coach</strong>
+    <button type="button" class="btn btn-small" id="coachClose">Close</button>
+  </div>
+  <div class="coach-log" id="coachLog"></div>
+  <form class="coach-form" id="coachForm">
+    <input type="text" id="coachInput" placeholder="Ask the coach…" autocomplete="off">
+    <button type="submit" class="btn btn-gold">Send</button>
+  </form>
+</div>
+<button type="button" class="btn btn-gold coach-fab hidden" id="coachFab">AI Coach</button>
+
+<footer class="footer">
+  <div class="wrap muted small">
+    Loopforge Academy — checked loops, gated graphs, evidence over opinion.
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

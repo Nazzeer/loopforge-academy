@@ -1,0 +1,1 @@
+{"description":"Loopforge Academy — AI/ML agentic learning platform for SMEs and startups","devDependencies":{"wrangler":"^3.0.0"},"name":"loopforge-academy","private":true,"scripts":{"dev":"wrangler dev","test":"node tests/run.mjs"},"type":"module","version":"0.1.0"}

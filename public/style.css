@@ -1,0 +1,148 @@
+/* Loopforge Academy — dark navy + gold.
+   Operator design rules: NO gradients, NO box-shadows, border-radius <= 3px. */
+
+:root {
+  --navy: #0a0f1e;
+  --navy-2: #101830;
+  --panel: #131c38;
+  --line: #26335c;
+  --gold: #d4af37;
+  --gold-dim: #a8892c;
+  --text: #f2f4f8;
+  --soft: #aeb9cf;
+  --muted: #7e8cab;
+  --danger: #e07a5f;
+  --ok: #7fb069;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar {
+  background: var(--navy-2);
+  border-bottom: 2px solid var(--gold);
+}
+.topbar-in {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px; padding-bottom: 14px;
+}
+.brand { color: var(--text); font-weight: 800; letter-spacing: 2px; font-size: 18px; }
+.brand span { color: var(--gold); }
+.brand:hover { text-decoration: none; }
+.topnav a { color: var(--soft); margin-left: 18px; font-size: 14px; }
+.topnav a:hover { color: var(--text); text-decoration: none; }
+
+main.wrap { padding-top: 28px; padding-bottom: 60px; min-height: 70vh; }
+
+.footer { border-top: 1px solid var(--line); padding: 18px 0 30px; }
+
+h1 { font-size: 40px; line-height: 1.15; margin: 0 0 14px; }
+h2 { font-size: 26px; margin: 28px 0 12px; }
+h3 { font-size: 18px; margin: 18px 0 8px; }
+.gold { color: var(--gold); }
+.muted { color: var(--muted); }
+.soft { color: var(--soft); }
+.small { font-size: 13px; }
+.lede { font-size: 19px; color: var(--soft); max-width: 720px; }
+
+.btn {
+  display: inline-block;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--gold); text-decoration: none; }
+.btn-gold { background: var(--gold); border-color: var(--gold); color: #141414; font-weight: 700; }
+.btn-gold:hover { background: var(--gold-dim); border-color: var(--gold-dim); }
+.btn-small { padding: 5px 10px; font-size: 13px; }
+.btn[disabled] { opacity: 0.55; cursor: default; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.price-card { text-align: left; }
+.price-card .price { font-size: 36px; font-weight: 800; color: var(--gold); }
+.price-card ul { padding-left: 18px; color: var(--soft); }
+
+.pill {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  border: 1px solid var(--line); border-radius: 3px; padding: 2px 8px; color: var(--soft);
+  text-transform: uppercase;
+}
+.pill-done { color: var(--ok); border-color: var(--ok); }
+.pill-submitted { color: var(--gold); border-color: var(--gold); }
+.pill-returned { color: var(--danger); border-color: var(--danger); }
+
+label { display: block; font-size: 13px; color: var(--soft); margin: 12px 0 5px; }
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+  width: 100%;
+  background: var(--navy);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--text);
+  padding: 10px;
+  font-size: 15px;
+  font-family: inherit;
+}
+textarea { min-height: 110px; resize: vertical; }
+input:focus, textarea:focus, select:focus { outline: 1px solid var(--gold); }
+
+.form-box { max-width: 440px; margin: 30px auto; }
+.error { color: var(--danger); font-size: 14px; margin-top: 10px; }
+.notice { color: var(--gold); font-size: 14px; margin-top: 10px; }
+
+.lesson-body { color: var(--soft); }
+.lesson-body h1 { font-size: 24px; color: var(--text); }
+.lesson-body h2 { font-size: 20px; color: var(--text); }
+.lesson-body code, .lesson-body pre {
+  background: var(--navy); border: 1px solid var(--line); border-radius: 3px;
+  font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 13px;
+}
+.lesson-body pre { padding: 12px; overflow-x: auto; }
+.lesson-body code { padding: 1px 5px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14px; }
+th { color: var(--muted); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* Coach drawer */
+.coach-drawer {
+  position: fixed; top: 0; right: 0; width: 360px; max-width: 92vw; height: 100vh;
+  background: var(--navy-2); border-left: 2px solid var(--gold);
+  display: flex; flex-direction: column; z-index: 40;
+}
+.coach-drawer.hidden, .hidden { display: none; }
+.coach-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-bottom: 1px solid var(--line);
+}
+.coach-log { flex: 1; overflow-y: auto; padding: 14px 16px; }
+.coach-msg { margin-bottom: 12px; font-size: 14px; white-space: pre-wrap; }
+.coach-msg .who { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+.coach-msg-user .bubble { color: var(--text); }
+.coach-msg-assistant .bubble { color: var(--soft); }
+.coach-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
+.coach-form input { flex: 1; }
+.coach-fab { position: fixed; right: 18px; bottom: 18px; z-index: 39; }
